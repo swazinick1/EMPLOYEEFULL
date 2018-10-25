@@ -1,0 +1,26 @@
+{
+  "name": "employeefull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swazinick1/EMPLOYEEFULL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swazinick1/EMPLOYEEFULL/issues"
+  },
+  "homepage": "https://github.com/swazinick1/EMPLOYEEFULL#readme"
+}
