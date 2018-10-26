@@ -2,12 +2,10 @@
 //pull required dependencies
 const express = require ('express');
 
-const app = express ();
-const path = require('path');
 // const PORT = 3000;
 
 //import employees list
-const employer = require ('../app/data/employer.js');
+const employer = require ('../data/employer.js');
 
 
 // //=====Routing=====//
@@ -16,7 +14,8 @@ module.exports = function(app){
 
 //Pulls from a list of employers
 app.get('/api/employer', function(req,res){
-    res.json(employer);
+    //console.log(employer);
+     return res.json(employer);
 });
 
 // User survey post for results
@@ -69,5 +68,4 @@ app.post('/api/employer', function(req,res){
     res.json(bestMatch);
 });
 }
-module.exports = app;
 
