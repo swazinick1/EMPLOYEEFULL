@@ -1,6 +1,7 @@
 
 //pull required dependencies
 const express = require ('express');
+const path = require ('path');
 
 // const PORT = 3000;
 
@@ -10,62 +11,18 @@ const employer = require ('../data/employer.js');
 
 // //=====Routing=====//
 
-module.exports = function(app){
-
-//Pulls from a list of employers
-app.get('/api/employer', function(req,res){
-    //console.log(employer);
-     return res.json(employer);
-});
-
-// User survey post for results
-app.post('/api/employer', function(req,res){
+module.exports = function (app) {
     
-    let bestMatch = {
-        name: "",
-        photo: "",
-        scoreDifference: 1000
-    };
+    app.get("/api/employer", function (req, res){
+        console.log("GET", employer)
+        res.json(employer)
+    })
 
-    //Take results of user survey and parses it
-    let userData = req.body;
-    let userScores = userData.scores;
+    app.post("/api/employer", function (req, res){
+        console.log(req.body);
 
-    console.log('userScores', req.body);
-
-    //Calculate difference between scores
-    let totalDifference = 0;
-
-    //Loop through possible employers
-    for (let i = 0; i < employer.length; i++){
-        console.log(employer[i]);
-        //Total diff = 0
-
-        //Loop through scores of employers
-        for (let j = 0; j < employer[i].scores[j]; i++){
-
-            //Calculate difference between scores and add them up
-            totalDifference += Math.abs(parseInt(userScores[j])-parseInt(employer[i].scores[j]));
-            //???
-            // Total diff = 10
-            console.log('totalDifference = ' + totalDifference);
-
-            //If sum of difference is less than diff of current match
-            if(totalDifference <= bestMatch.scoreDifference) {
-
-                //Reset best match to new employer
-                bestMatch.name = employer[i].name;
-                bestMatch.photo = employer[i].photo;
-                bestMatch.friendDifference = totalDifference;
-            }// End total diff statement
-        }// End loop through employer scores
-    }// End loop through possible employers
-
-    //Save userData to database after check
-    employer.push(userData);
-
-    // Return JSON with users best match
-    res.json(bestMatch);
-});
-}
+        let randomUser = Math.floor(Math.random() * employer.length)
+        res.json(employer[randomUser]);
+    });
+};
 

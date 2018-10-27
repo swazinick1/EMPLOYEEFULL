@@ -1,7 +1,7 @@
 const empFinder=[
     {
         'name': 'Oscar Montes',
-        'photo': '',
+        'photo': `https://s3-us-west-1.amazonaws.com/co-directory-images/oscar-montes-4129511.jpg`,
         'scores':[
             4,
             5,
@@ -17,7 +17,7 @@ const empFinder=[
     },
     {
         "name":"Whitney Paulson",
-        "photo": "",
+        "photo": `https://www.albertleatribune.com/wp-content/uploads/2016/02/0211.patrol.profile.1.jpg`,
         "scores":[
             5,
             4,
@@ -33,7 +33,7 @@ const empFinder=[
     },
     {
         "name":"Ernie Gene",
-        "photo": "",
+        "photo": `https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ernie_Watts.jpg/1200px-Ernie_Watts.jpg`,
         "scores":[
             5,
             5,
@@ -49,7 +49,7 @@ const empFinder=[
     },
     {
         "name":"Latisha Mac",
-        "photo": "",
+        "photo": `https://atlanticbay.com/wp-content/uploads/latishaPerkins@2x1.jpg`,
         "scores":[
             2,
             4,
@@ -65,7 +65,7 @@ const empFinder=[
     },
     {
         "name":"The Mariachis",
-        "photo": "",
+        "photo": `http://www.onblackheath.com/sites/default/files/styles/artist_single/public/The%20Mariachis%20-%20photo.jpg?itok=lk275iy4`,
         "scores":[
             1,
             3,
@@ -81,7 +81,7 @@ const empFinder=[
     },
     {
         "name":"Kelly Custo",
-        "photo": "",
+        "photo": `http://revistas.elheraldo.co/sites/default/files/2016/11/23/articulo/kelly_palacio.jpg`,
         "scores":[
             2,
             3,
